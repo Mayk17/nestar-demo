@@ -4,3 +4,4 @@ const  PropertyList = () => {
 };
 
 export default PropertyList;
+/// qani ko'ramiza to'rimikan

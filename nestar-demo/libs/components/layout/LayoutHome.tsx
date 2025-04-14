@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Component } from "react";
 import Top from "../Top";
 import Footer from "../Footer";
+import HeaderFilter from "../homepage/HeaderFilter";
 
 const withLayoutMain = (Component: any) => {
   return (props: any) => {
@@ -15,7 +16,11 @@ const withLayoutMain = (Component: any) => {
           <Stack id={"top"}>
             <Top />
           </Stack>
-          <Stack className={"header-main"}>Header Filter</Stack>
+          <Stack className={"header-main"}>
+            <Stack className={"container"}>
+              <HeaderFilter />
+            </Stack>
+          </Stack>
           <Stack id={"main"}>
             <Component {...props} />
           </Stack>

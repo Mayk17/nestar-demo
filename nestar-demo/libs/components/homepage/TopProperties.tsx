@@ -1,13 +1,15 @@
 import { Box, Stack } from "@mui/material";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import TopPropertyCard from "./TopPropertyCard";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
+import TopPropertyCard from "./TopPropertyCard";
+
 
 const TopProperties = ({ initialInput, ...props }: any) => {
-	const [topProperties, seTopProperties] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
-
+	const [topProperties, seTopProperties] = useState<number[]>([
+		1, 2, 3, 4, 5, 6, 7,
+	]);
 	return (
 		<Stack className="top-properties">
 			<Stack className="container">
@@ -16,11 +18,11 @@ const TopProperties = ({ initialInput, ...props }: any) => {
 						<span>Top properties</span>
 						<p>Check out our Top Properties</p>
 					</Box>
-					<Box className={"right"}>
-						<div className={"pagination-box"}>
-							<WestIcon className={"swiper-top-prev"} />
-							<div className={"swiper-top-pagination"}></div>
-							<EastIcon className={"swiper-top-next"} />
+					<Box className="right">
+						<div className="pagination-box">
+							<WestIcon className="swiper-top-prev" />
+							<div className="swiper-top-pagination"></div>
+							<EastIcon className="swiper-top-next" />
 						</div>
 					</Box>
 				</Stack>
@@ -36,16 +38,20 @@ const TopProperties = ({ initialInput, ...props }: any) => {
 						pagination={{
 							el: ".swiper-top-pagination",
 						}}>
-						{topProperties.map((property, index) => (
-							<SwiperSlide key={index} className="top-property-slide">
-								<TopPropertyCard />
-							</SwiperSlide>
-						))}
+						{topProperties.map((property, index) => {
+							return (
+								<SwiperSlide key={index} className="top-property-slide">
+									<TopPropertyCard />
+								</SwiperSlide>
+							);
+						})}
 					</Swiper>
 				</Stack>
 			</Stack>
 		</Stack>
 	);
 };
+
+
 
 export default TopProperties;

@@ -1,9 +1,9 @@
 
-import { CheckBox } from "@mui/icons-material";
-import { Button, FormControl, IconButton, InputLabel, MenuItem, OutlinedInput, Select, Stack, Tooltip, Typography } from "@mui/material";
+
+import { Button, Checkbox, FormControl, IconButton, InputLabel, MenuItem, OutlinedInput, Select, Stack, Tooltip, Typography } from "@mui/material";
 import { useState } from "react"
-import { start } from "repl";
-import { propertySquare } from "../../config"
+import RefreshIcon from "@mui/icons-material/Refresh"
+import { propertySquare } from "../config";
 
 
 const Filter = () => {
@@ -45,7 +45,7 @@ const Filter = () => {
                         {["SEOUL", "BUSAN", "DAEGU"].map((location: string) => {
                             return (
                                 <Stack className={"input-box"} key={location}>
-                                    <CheckBox
+                                    <Checkbox
                                         id={location}
                                         className="property-checkbox"
                                         color="default"
@@ -65,7 +65,7 @@ const Filter = () => {
                     <Typography className={"title"}>Property Type</Typography>
                     {["APARTMENT", "HOUSE", "VILLA"].map((type: string)=> (
                         <Stack className={"input-box"} key={type}>
-                            <CheckBox
+                            <Checkbox
                                 id={type}
                                 className="property-checkbox"
                                 color="default"
@@ -187,7 +187,7 @@ const Filter = () => {
                 <Stack className={"find-your-home"} mb={"30px"}>
                     <Typography className={"title"}>Options</Typography>
                     <Stack className={"input-box"}>
-                        <CheckBox
+                        <Checkbox
                             id={"Barter"}
                             className="property-checkbox"
                             color="default"
@@ -199,7 +199,7 @@ const Filter = () => {
                         </label>
                     </Stack>
                     <Stack className={"input-box"}>
-                        <CheckBox
+                        <Checkbox
                             id={"Rent"}
                             className="property-checkbox"
                             color="default"

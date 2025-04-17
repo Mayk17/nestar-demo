@@ -51,12 +51,12 @@ const PropertyCard = () => {
                     </Stack>
                     <Stack className="option">
                         <img src="/img/icons/room.svg" alt="" />{" "}
-                        <Typography>  7 room</Typography>
+                        <Typography>7 room</Typography>
                     </Stack>
 
                     <Stack className="option">
                         <img src="/img/icons/expand.svg" alt="" />{" "}
-                        <Typography>  170 m2</Typography>
+                        <Typography>170 m2</Typography>
                     </Stack>
                 </Stack>
                 <Stack className="divider"></Stack>
